@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<title>Order Confirmation</title>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<h1>Order Confirmation</h1>
+<p>Please review your order details before submitting payment.</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Address</th>
+<th>Phone</th>
+<th>Snack</th>
+<th>Quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ order_details.name }}</td>
+<td>{{ order_details.email }}</td>
+<td>{{ order_details.address }}</td>
+<td>{{ order_details.phone }}</td>
+<td>{{ order_details.snack }}</td>
+<td>{{ order_details.quantity }}</td>
+</tr>
+</tbody>
+</table>
+<form action="/success" method="POST">
+<button type="submit" class="btn btn-primary">Submit Payment</button>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+---
